@@ -14,3 +14,12 @@ end
 def start_of_word word, range
 	word[0, range]
 end
+
+def first_word word
+	word = word.split(" ")
+	word[0]
+end
+
+def titleize word
+	word.titleize!
+end
