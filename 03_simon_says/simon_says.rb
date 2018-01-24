@@ -1,3 +1,4 @@
+
 def echo word
 	word
 end
@@ -21,5 +22,12 @@ def first_word word
 end
 
 def titleize word
-	word.titleize!
+	arr = word.split(" ")
+		arr[0].capitalize!
+		arr.each do |check|
+			if check != "the" and check != "and" and check!= "over"
+				arr[arr.find_index(check)].capitalize!
+			end
+		end
+		arr.join(" ")
 end
